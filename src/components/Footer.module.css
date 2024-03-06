@@ -1,9 +1,46 @@
+/* Definindo estilos para o rodapé */
 .footer {
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #e1e1e1;
-  padding: 0 20px 20px 20px;
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+  position: relative;
+}
+
+/* Estilo para a linha horizontal */
+#lineFooter {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, #fff 10%, transparent 90%);
+  width: 80%;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Estilos para o título */
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos para o parágrafo */
+p {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 30px;
+}
+
+/* Estilos para o link */
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffa500;
 }
