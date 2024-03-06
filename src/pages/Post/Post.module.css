@@ -1,5 +1,6 @@
 .post_container {
-  text-align: center;
+  text-align: justify;
+  padding: 0 20px;
 }
 
 .post_container h3 {
