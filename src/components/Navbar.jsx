@@ -1,44 +1,38 @@
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-
 import { useAuthentication } from "../hooks/useAuthentication";
-
 import { useAuthValue } from "../contexts/AuthContext";
-
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   const { logout } = useAuthentication();
   const { user } = useAuthValue();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${menuOpen ? styles.menuOpen : ""}`}>
       <NavLink className={styles.brand} to="/">
         Blog <span className="apce">APCE</span>
       </NavLink>
       <ul className={styles.links_list}>
         <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
+          <NavLink to="/" activeClassName={styles.active}>
             Home
           </NavLink>
         </li>
         {!user && (
           <>
             <li>
-              <NavLink
-                to="/login"
-                className={({ isActive }) => (isActive ? styles.active : "")}
-              >
+              <NavLink to="/login" activeClassName={styles.active}>
                 Entrar
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/register"
-                className={({ isActive }) => (isActive ? styles.active : "")}
-              >
+              <NavLink to="/register" activeClassName={styles.active}>
                 Cadastrar
               </NavLink>
             </li>
@@ -47,28 +41,19 @@ const Navbar = () => {
         {user && (
           <>
             <li>
-              <NavLink 
-                to="/posts/create"
-                className={({ isActive }) => (isActive ? styles.active : "")}
-              >
+              <NavLink to="/posts/create" activeClassName={styles.active}>
                 Post
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/dashboard"
-                className={({ isActive }) => (isActive ? styles.active : "")}
-              >
+              <NavLink to="/dashboard" activeClassName={styles.active}>
                 Dashboard
               </NavLink>
             </li>
           </>
         )}
         <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
+          <NavLink to="/about" activeClassName={styles.active}>
             Sobre
           </NavLink>
         </li>
@@ -78,6 +63,9 @@ const Navbar = () => {
           </li>
         )}
       </ul>
+      <button className={styles.toggleButton} onClick={toggleMenu}>
+        <img src="/cozy.svg" alt="" />
+      </button>
     </nav>
   );
 };
