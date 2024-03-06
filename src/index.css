@@ -1,5 +1,5 @@
 body {
-  background-color: #f6fcff;
+  background-color: #e1e1e1;
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -20,7 +20,7 @@ nav button {
   text-decoration: none;
   background-color: transparent;
   border: none;
-  color: #000;
+  color: #fff;
   transition: 0.4s;
   font-size: 1em;
   cursor: pointer;

@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <NavLink className={styles.brand} to="/">
-        Mini <span>Blog</span>
+        Blog <span className="apce">APCE</span>
       </NavLink>
       <ul className={styles.links_list}>
         <li>
@@ -47,11 +47,11 @@ const Navbar = () => {
         {user && (
           <>
             <li>
-              <NavLink
+              <NavLink 
                 to="/posts/create"
                 className={({ isActive }) => (isActive ? styles.active : "")}
               >
-                Novo post
+                Post
               </NavLink>
             </li>
             <li>
