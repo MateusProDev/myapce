@@ -29,6 +29,7 @@ nav button {
 
 a:hover,
 nav button:hover {
+  background-color: #000;
   color: #bbb;
 }
 

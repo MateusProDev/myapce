@@ -67,9 +67,13 @@
     font-size: 1.2em;
     cursor: pointer;
     margin-top: 5px;
-    
+    align-items: center;
+  }
+  .toggleButton span{
+    font-size: 16px;
   }
   .material-symbols-outlined {
+    margin-top: 10px;
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
