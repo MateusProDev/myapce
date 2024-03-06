@@ -5,6 +5,9 @@
 .post_container h3 {
   margin-bottom: 0.2em;
 }
+.post_container img {
+  width: 100px;
+}
 
 .post_container .tags {
   display: flex;
