@@ -31,7 +31,9 @@
 .links_list li a {
   padding: 0.4em 0.6em;
 }
-
+.toggleButton{
+  display: none;
+}
 .active {
   background-color: #000;
   color: #fff;
@@ -70,7 +72,7 @@
     align-items: center;
   }
   .toggleButton span{
-    font-size: 16px;
+    font-size: 12px;
   }
   .material-symbols-outlined {
     margin-top: 10px;
