@@ -5,7 +5,13 @@
   justify-content: center;
   padding: 0 20px;
 }
-
+.home h1{
+  margin: 20px 0 0 0;
+}
+.home p{
+  font-size: 12px;
+  margin: 5px 0 40px 0;
+}
 .search_form {
   max-width: 100%;
   width: 60%;

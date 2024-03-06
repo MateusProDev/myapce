@@ -30,7 +30,8 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
-      <h1>Veja os nossos posts mais recentes</h1>
+      <h1>Nosso Feed</h1>
+      <p id="postCad">Cadastra-se para Ver as postagens e ate mesmo postar</p>
       <form className={styles.search_form} onSubmit={handleSubmit}>
         <input
           type="text"
