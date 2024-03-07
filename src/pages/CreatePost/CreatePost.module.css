@@ -1,12 +1,81 @@
+/* Adicione estas regras CSS ao seu arquivo CreatePost.module.css */
+
 .create_post {
+  max-width: 100%;
+  margin: 0 auto;
   text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .create_post h2 {
-  font-size: 2.2em;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .create_post p {
-  color: #aaa;
-  margin-bottom: 2em;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.create_post form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create_post label {
+  margin-bottom: 15px;
+}
+
+.create_post label span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.create_post input[type="text"],
+.create_post textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%; /* 100% da largura do contêiner pai por padrão */
+  box-sizing: border-box; /* Adiciona o padding e a borda ao tamanho total */
+}
+
+.create_post textarea {
+  resize: vertical; /* Permite redimensionamento vertical apenas */
+  min-height: 150px; /* Altura mínima do textarea */
+}
+
+.create_post .btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create_post .btn:hover {
+  background-color: #0056b3;
+}
+
+.create_post .error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Estilos para telas menores (mobile) */
+@media screen and (max-width: 768px) {
+  .create_post input[type="text"],
+  .create_post textarea {
+    width: 330px !important; /* Altera a largura para 90% em telas menores */
+    margin-left: -100px;
+  }
 }
