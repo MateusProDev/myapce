@@ -9,7 +9,7 @@ const CreatePost = () => {
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
   const [body, setBody] = useState("");
-  const [tags, setTags] = useState([]);
+  const [tags, setTags] = useState("");
   const [formError, setFormError] = useState("");
 
   const { user } = useAuthValue();
@@ -35,25 +35,14 @@ const CreatePost = () => {
     // check values
     if (!title || !image || !tags || !body) {
       setFormError("Por favor, preencha todos os campos!");
+      return; // Adicionado para interromper o processo de submissão se houver erro
     }
 
-    console.log(tagsArray);
-
-    console.log({
-      title,
-      image,
-      body,
-      tags: tagsArray,
-      uid: user.uid,
-      createdBy: user.displayName,
-    });
-
-    if(formError) return
-
+    // Se não houver erro, prossegue com a submissão
     insertDocument({
       title,
       image,
-      body,
+      body: body.split('\n').map((paragraph) => `<p>${paragraph}</p>`).join(''), // Transforma cada linha em um parágrafo
       tags: tagsArray,
       uid: user.uid,
       createdBy: user.displayName,

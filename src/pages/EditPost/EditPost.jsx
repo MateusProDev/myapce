@@ -104,7 +104,7 @@ const EditPost = () => {
                 value={image}
               />
             </label>
-            <p className={styles.preview_title}>Preview da imagem atual:</p>
+            <p className={styles.preview_title}>Preview da imagem atual:</p><br />
             <img
               className={styles.image_preview}
               src={post.image}
