@@ -1,5 +1,5 @@
 .post_container {
-  text-align: justify;
+  text-align: center;
   padding: 0 20px;
 }
 
@@ -7,15 +7,19 @@
   margin-bottom: 0.2em;
 }
 .post_container img {
-  width: 100px;
+  width: 350px;
 }
-
 .post_container .tags {
   display: flex;
   justify-content: center;
 }
+.post_container p{
+  text-align: justify;
+  font-size: 18px;
+}
 .tags p {
-  margin-right: 1em;
+  font-size: 12px;
+  margin-right: 0.5em;
 }
 
 .tags span {

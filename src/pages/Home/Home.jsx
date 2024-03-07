@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <h1>Nosso Feed</h1>
-      <p id="postCad">Cadastra-se para Ver as postagens e ate mesmo postar</p>
+      <p id="postCad">Cadastre-se para ver e postar pubicações.</p>
       <form className={styles.search_form} onSubmit={handleSubmit}>
         <input
           type="text"
