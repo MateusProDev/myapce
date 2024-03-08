@@ -64,7 +64,7 @@ const Navbar = () => {
         )}
       </ul>
       <button className={styles.toggleButton} onClick={toggleMenu}>
-        <span>MENU</span><img src="/cozy.svg" alt="Icon menu lista" />
+        <span>MENU</span><img src="/pontos.png" alt="Icon menu lista" />
       </button>
     </nav>
   );
