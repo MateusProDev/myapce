@@ -9,8 +9,9 @@
   margin: 20px 0 0 0;
 }
 .home p{
-  font-size: 12px;
+  font-size: 14px;
   margin: 5px 0 8px 0;
+  color: #b6b6b6;
 }
 .search_form {
   max-width: 100%;
