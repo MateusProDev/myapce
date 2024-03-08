@@ -110,7 +110,7 @@ button[disabled] {
 }
 
 .container .error {
-  color: #721c24;
+  color: #dc3545;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
   padding: 5px;
